@@ -2,11 +2,10 @@
  * Класс FileUploaderModal
  * Используется как всплывающее окно для загрузки изображений
  */
-class FileUploaderModal {
+class FileUploaderModal extends BaseModal {
   constructor( element ) {
-    super(element);
+	super(element);
 	  this.registerEvents();
-
   }
 
   /**
@@ -21,7 +20,7 @@ class FileUploaderModal {
   registerEvents(){
 
     const cross = this.elementDOM.getElementsByTagName('i')[0];
-      const btnClose = this.elementDOM.getElementsByClassName('close')[0];
+    const btnClose = this.elementDOM.getElementsByClassName('close')[0];
     const btnSendAll =  this.elementDOM.getElementsByClassName('send-all')[0];
     const contentArea = this.elementDOM.getElementsByClassName('scrolling content')[0];
 
