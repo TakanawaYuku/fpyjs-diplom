@@ -4,6 +4,8 @@
  */
 class FileUploaderModal {
   constructor( element ) {
+    super(element);
+	  this.registerEvents();
 
   }
 
