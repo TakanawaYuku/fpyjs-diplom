@@ -73,8 +73,7 @@ class FileUploaderModal extends BaseModal {
       const contentArea = this.elementDOM.getElementsByClassName('scrolling content')[0];
       for (const elem of images.reverse()){
         contentArea.insertAdjacentHTML('beforeend',this.getImageHTML(elem));
-        //contentArea.innerHTML = contentArea.innerHTML + this.getImageHTML(elem);//на практике говорили, что запись
-        //напрямую в innerHTML небезопасна.
+       
       }
     }
 
