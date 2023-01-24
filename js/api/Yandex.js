@@ -26,9 +26,7 @@ class Yandex {
    * Метод загрузки файла в облако
    */
   static uploadFile(path, url, callback){
-	  // path - КУДА НА ЯНДЕКС.ДИСКЕ
-	  //
-	  // url - местоположение картинки
+	  
 	  createRequest({
 		method: "POST",
 		url: Yandex.HOST+"/resources/upload/?path="+encodeURIComponent(path)+"&url="+encodeURIComponent(url),
@@ -55,7 +53,7 @@ class Yandex {
   static getUploadedFiles(callback){
 	createRequest({
 		method: "GET",
-		//url: Yandex.HOST+"/resources/files?limit=1000",
+		
 		url: Yandex.HOST+"/resources/last-uploaded?limit=5&media_type=image",
 		auth:"OAuth "+Yandex.getToken(),
 		callback: callback,
