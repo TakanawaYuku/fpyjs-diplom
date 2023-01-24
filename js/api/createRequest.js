@@ -11,11 +11,6 @@ const createRequest = (options = {}) => {
 				options.callback(xhr);
 			}
 		});
-		/*
-		xhr.addEventListener('progress', (e)=>{
-			console.log('loaded:'+e.loaded);
-		});
-		*/
 		xhr.open(options.method,options.url);
 		xhr.responseType = 'json';
 		xhr.setRequestHeader("Authorization",options.auth);
