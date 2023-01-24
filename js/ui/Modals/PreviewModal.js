@@ -82,7 +82,7 @@ class PreviewModal extends BaseModal {
     formatDate(date) {
       const months = ['января','ферваля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря',];
       let dt = new Date(Date.parse(date));
-  //	   return dt.getDate()+' '+dt.toLocaleString("ru-ru",{month:"long"})+' '+dt.getFullYear()+'г. в '+dt.getHours()+':'+dt.getMinutes();
+   
        return dt.getDate()+' '+months[dt.getMonth()]+' '+dt.getFullYear()+'г. в '+dt.getHours()+':'+dt.getMinutes();
     }
 
