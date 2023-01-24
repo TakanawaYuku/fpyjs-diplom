@@ -40,7 +40,7 @@ class ImageViewer {
 					this.clickCount = 0;
 					clearTimeout(this.timeoutId);
 					  if (event.target.nodeName.toLowerCase()==='img'){
-						event.target.classList.toggle('selected');// здесь п.2.2
+						event.target.classList.toggle('selected');
 						this.checkButtonText();
 					  }
 				}
@@ -65,9 +65,9 @@ class ImageViewer {
 			  }
 		  }
 	  }, false);
-	  //конец п.2.1
+	  
 
-	  //пункт 2.3
+	  
 	  this.btnSelectAll.addEventListener('click', () => {
 		const images = Array.from(this.imagesList.getElementsByTagName('div'));
 
@@ -86,7 +86,7 @@ class ImageViewer {
 		this.checkButtonText();
 	  });
 
-	  //пункт 2.4
+
 	this.btnShowUploadedFiles.addEventListener('click', ()=>{
 		const images = Array.from(this.imagesList.getElementsByTagName('div'));
 		const fp = App.getModal('filePreviewer');
@@ -100,7 +100,7 @@ class ImageViewer {
 			}
 		});
 	});
-	  //пункт 2.5
+	
 	this.btnSend.addEventListener('click', ()=>{
 		const fu = App.getModal('fileUploader');
 		const images = Array.from(this.imagesList.getElementsByTagName('div'));
